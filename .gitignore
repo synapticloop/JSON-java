@@ -1,2 +1,5 @@
 /build-eclipse/
 /build/
+cobertura.ser
+.DS_Store
+/dist/
