@@ -20,9 +20,9 @@
 		<javac srcdir="${src.java.dir}" destdir="${build.dir}" debug="on" includeantruntime="false" source="1.6" target="1.6" />
 	</target>
 
-	<target name="dist" depends="clean,init,compile">
+	<target name="dist" depends="clean,init,compile" description="build the distributable jar file">
 		<jar destfile="dist/${ant.project.name}.jar">
-			<fileset dir="${build.classes.dir}">
+			<fileset dir="${build.dir}">
 				<include name="**/*.*"/>
 			</fileset>
 		</jar>
