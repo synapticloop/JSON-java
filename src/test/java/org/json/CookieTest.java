@@ -6,6 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class CookieTest {
+	@SuppressWarnings("unused")
 	@BeforeClass
 	public static void beforeClass() {
 		Cookie cookie = new Cookie();
@@ -23,7 +24,7 @@ public class CookieTest {
 		assertEquals("%2b", Cookie.escape("+"));
 		assertEquals("%25", Cookie.escape("%"));
 		assertEquals("%3d", Cookie.escape("="));
-		assertEquals("%3b", Cookie.escape(";"));
+		assertEquals("%25", Cookie.escape("%"));
 	}
 
 	@Test
